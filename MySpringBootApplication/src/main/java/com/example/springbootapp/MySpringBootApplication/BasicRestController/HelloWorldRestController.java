@@ -5,9 +5,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloWorldRestController {
-    // expose "/" to a @GetMapping
-    @GetMapping
+    // expose "/hello" to a @GetMapping
+    @GetMapping ("/hello")
     public String printHello() {
-        return "Hello World.";
+        return "Hello";
+    }
+
+    // expose "/helloWorld" to a @GetMapping
+    @GetMapping ("/helloWorld")
+    public String printHelloWorld() {
+        return "Hello World";
     }
 }
